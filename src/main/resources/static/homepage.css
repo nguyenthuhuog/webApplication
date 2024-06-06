@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #0c1c2c ;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header img {
+    height: 50px;
+    vertical-align: middle;
+}
+
+#header input[type="text"] {
+    padding: 5px;
+    margin-left: 20px;
+    width: 200px;
+}
+
+#header .auth-buttons {
+    margin-right: 20px;
+}
+
+#header .auth-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #0c1c2c ;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 200px;
+    height: calc(100% - 60px);
+    background-color: #f4f4f4;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+#main {
+    margin-top: 60px;
+    margin-left: 220px;
+    padding: 10px;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.category {
+    margin: 10px 0;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: #0c1c2c  ;
+    color: white;
+    width: 100%;
+    text-align: left;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s;
+}
+
+.banner img.hidden {
+    opacity: 0;
+}
+
+.contact-info {
+    background-color: #0c1c2c ;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <div id="header">
+        <img src="img/logo.jpg" alt="Logo">
+        <input type="text" placeholder="Search for products...">
+        <div class="auth-buttons">
+            <button onclick="openModal('loginModal')">Login</button>
+            <button onclick="openModal('registerModal')">Register</button>
+        </div>
+    </div>
+
+    <div id="sidebar">
+        <!-- Categories will be dynamically populated here -->
+    </div>
+
+    <div id="main">
+        <div class="banner">
+            <img src="img/banner/1.png" class="visible">
+            <img src="img/banner/2.png" class="hidden">
+            <img src="img/banner/3.png" class="hidden">
+            <!-- Add more banners if needed -->
+        </div>
+
+        <div class="product-grid">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <p>Product 1</p>
+                <p>$10.00</p>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <p>Product 2</p>
+                <p>$20.00</p>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Product 3">
+                <p>Product 3</p>
+                <p>$30.00</p>
+            </div>
+            <!-- Add more products here -->
+        </div>
+        
+        <div class="contact-info">
+            <p>Contact Us: 123-456-7890</p>
+            <p>Email: info@onlinestore.com</p>
+            <p>Address: 123 Main Street, Anytown, USA</p>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('loginModal')">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" name="loginEmail">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('registerModal')">&times;</span>
+            <h2>Register</h2>
+            <form>
+                <label for="registerEmail">Email:</label>
+                <input type="email" id="registerEmail" name="registerEmail">
+                <label for="registerPassword">Password:</label>
+                <input type="password" id="registerPassword" name="registerPassword">
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src = "homepage.js"></script>
+</body>
+</html>
