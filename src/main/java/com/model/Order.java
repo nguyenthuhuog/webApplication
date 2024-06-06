@@ -1,4 +1,4 @@
-package com.models;
+package com.model;
 
 import jakarta.persistence.*;
 import java.util.Date;
