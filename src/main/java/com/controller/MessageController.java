@@ -2,10 +2,11 @@ package com.controller;
 
 import com.model.Message;
 import com.repository.MessageRepository;
+import com.dto.MessageDTO; // Make sure to import the DTO
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.util.List; // Import List
 
 @RestController
 @RequestMapping("/api/messages")
@@ -25,7 +26,12 @@ public class MessageController {
     }
 
     @PostMapping(consumes = "application/x-www-form-urlencoded")
-    public Message createMessage(@ModelAttribute Message message) {
+    public Message createMessage(@ModelAttribute MessageDTO messageDTO) {
+        Message message = new Message();
+        message.setFirstName(messageDTO.getFirstName());
+        message.setLastName(messageDTO.getLastName());
+        message.setEmail(messageDTO.getEmail());
+        message.setMessage(messageDTO.getMessage());
         return messageRepository.save(message);
     }
 
