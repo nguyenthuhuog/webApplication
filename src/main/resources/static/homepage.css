@@ -130,6 +130,10 @@ body {
     background-color: #91C8E4;
 }
 
+#header .auth-buttons button:hover {
+    background-color: #91C8E4;
+}
+
 #sidebar {
     position: fixed;
     top: 100px;
