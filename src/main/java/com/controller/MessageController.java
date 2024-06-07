@@ -24,8 +24,8 @@ public class MessageController {
         return messageRepository.findById(id).orElse(null);
     }
 
-    @PostMapping
-    public Message createMessage(@RequestBody Message message) {
+    @PostMapping(consumes = "application/x-www-form-urlencoded")
+    public Message createMessage(@ModelAttribute Message message) {
         return messageRepository.save(message);
     }
 
