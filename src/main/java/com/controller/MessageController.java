@@ -1,12 +1,12 @@
 package com.controller;
 
+import com.dto.MessageDTO;
 import com.model.Message;
 import com.repository.MessageRepository;
-import com.dto.MessageDTO; // Make sure to import the DTO
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List; // Import List
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/messages")
