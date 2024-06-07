@@ -1,84 +1,138 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    line-height: 1.8;
+}
+
+.bgr-img{
+    background-position: center;
+    background-size: cover;
+    background-image: url(src\main\resources\static\img\banner\7.jpg);
+    min-height: 100%;
 }
 
 #header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #0c1c2c;
-    color: white;
-    padding: 10px 0;
+    background-color: #F6F4EB;
+    color: #4682A9;
+    padding: 10px 20px;
     text-align: left;
     z-index: 1000;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
-.logo img {
-    height: 50px;
+#header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F6F4EB;
+    margin-right: 20px;
+    padding: 10px 10px 10px 10px;
 }
 
-#header input[type="text"] {
+#header .logo img {
+    height: 50px;  
+}
+
+#header .shop-name {
+    margin-right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #4682A9;
+}
+
+/* #header input[type="text"] {
     padding: 5px;
     margin-left: 20px;
     width: 200px;
-}
+    border-radius: 25px;
+} */
 
-#header .auth-buttons {
-    margin-right: 20px;
-}
-
-#header .auth-buttons button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #0c1c2c;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-
-#header search-bar {
+#header .search-bar {
     position: relative;
     display: flex;
     align-items: center;
+    /* flex: 1; */
+    background-color: #91C8E4;
+    border-radius: 20px;
+    padding: 5px 15px;
 }
 
-#header search-bar input {
+#header .search-bar input {
     width: 300px;
     padding: 10px;
+    border: none;
+    background: none;
+    outline: none;
 }
 
-#header search-bar i {
+#header .search-bar i {
     position: absolute;
     right: 10px;
     color: #ccc;
 }
 
-#header cart i {
-    font-size: 24px;
-    color: #000;
-    margin-right: 20px;
+#header .contact-info {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }
 
-#header .cart button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #0c1c2c;
+#header .contact-info div {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+#header .contact-info div i {
+    color: #4682A9;
+    margin-right: 5px;
+}
+
+#header .auth-buttons {
+    margin-right: 50px;
+    padding: 5px;
+}
+
+#header .auth-buttons button {
+    margin-left: 5px;
+    padding: 10px 20px;
+    background-color: #F6F4EB;
     border: none;
-    color: white;
+    color: #4682A9;
     cursor: pointer;
+    border-radius: 100px;
+    align-items: center;
+    font-size: 15px;
+}
+
+#header .auth-buttons i {
+    color: #4682A9;
+}
+
+#header .auth-buttons .btn-location{
+    hover{background-color: #91C8E4}
+}
+
+#header .auth-buttons .btn-cart{
+    background-color: #cae1f1;
+}
+
+#header .auth-buttons .btn {
+    background-color: #91C8E4;
 }
 
 #sidebar {
     position: fixed;
-    top: 60px;
+    top: 100px;
     left: 0;
     width: 200px;
     height: calc(100% - 60px);
@@ -99,24 +153,25 @@ body {
     margin: 10px 0;
     font-size: 18px;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     border: none;
-    background-color: #0c1c2c;
+    background-color: #629ad3;
     color: white;
     width: 100%;
     text-align: left;
+    border-radius: 25px;
 }
 
 .product-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
 }
 
 .product {
-    background-color: white;
+    background-color: #91C8E4;
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     width: calc(33.333% - 20px);
     box-sizing: border-box;
 }
@@ -148,8 +203,8 @@ body {
     opacity: 0;
 }
 
-.contact-info {
-    background-color: #0c1c2c;
+.contact-info-footer {
+    background-color: #629ad3;
     color: white;
     padding: 20px;
     text-align: center;
@@ -190,25 +245,25 @@ body {
     cursor: pointer;
 }
 
-.contact-form {
-    background-color: #f9f9f9;
+.contact-form-footer {
+    background-color: #F6F4EB;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
-.contact-form h2 {
+.contact-form-footer h2 {
     margin-top: 0;
 }
 
-.contact-form label {
+.contact-form-footer label {
     display: block;
     margin-bottom: 5px;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form-footer input,
+.contact-form-footer textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -216,7 +271,7 @@ body {
     border-radius: 5px;
 }
 
-.contact-form button {
+.contact-form-footer button {
     background-color: #0c1c2c;
     color: white;
     border: none;
@@ -225,7 +280,6 @@ body {
     border-radius: 5px;
 }
 
-.contact-form button:hover {
-    background-color: #092a40;
+.contact-form-footer button:hover {
+    background-color: #629ad3;
 }
-
