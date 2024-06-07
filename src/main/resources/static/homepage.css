@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Raleway", sans-serif;
     margin: 0;
@@ -6,13 +10,6 @@ body {
     flex-direction: column;
     height: 100%;
     line-height: 1.8;
-}
-
-.bgr-img{
-    background-position: center;
-    background-size: cover;
-    background-image: url(src\main\resources\static\img\banner\7.jpg);
-    min-height: 100%;
 }
 
 #header {
@@ -30,7 +27,7 @@ body {
 }
 
 #header .logo {
-    font-size: 24px;
+    font-size: 15px;
     font-weight: bold;
     color: #F6F4EB;
     margin-right: 20px;
@@ -111,7 +108,7 @@ body {
     cursor: pointer;
     border-radius: 100px;
     align-items: center;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 #header .auth-buttons i {
@@ -130,15 +127,43 @@ body {
     background-color: #91C8E4;
 }
 
+#header .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("src/main/resources/static/img/banner/7.jpg");
+    min-height: 100%;
+}
+
+#hamburger {
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
 #sidebar {
     position: fixed;
-    top: 100px;
+    top: 90px;
     left: 0;
     width: 200px;
     height: calc(100% - 60px);
+    z-index: 1;
     background-color: #f4f4f4;
+    overflow-x: hidden;
     overflow-y: auto;
     padding: 10px;
+}
+
+#sidebar button:hover{
+    background-color: #4682A9;
+    color: #F6F4EB;
+}
+
+.hidden {
+    display: none;
+}
+
+.sale-news, .free-shipping, .new-arrivals {
+    margin-top: 10px;
 }
 
 #main {
@@ -151,7 +176,7 @@ body {
 
 .category {
     margin: 10px 0;
-    font-size: 18px;
+    font-size: 15px;
     cursor: pointer;
     padding: 10px 10px 10px 10px;
     border: none;
@@ -194,7 +219,7 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 10;
     left: 0;
     transition: opacity 1s;
 }
@@ -234,7 +259,7 @@ body {
 .close {
     color: #aaa;
     float: right;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: bold;
 }
 
