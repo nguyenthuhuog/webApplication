@@ -268,11 +268,12 @@ body {
 
 .contact-form-footer input,
 .contact-form-footer textarea {
-    width: 100%;
+    width: 98%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    resize: none;
 }
 
 .contact-form-footer button {
