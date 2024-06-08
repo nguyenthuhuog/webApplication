@@ -109,10 +109,30 @@
             
             <div class="container">
                 <div class="main">
+
+                    <div class="product-grid">
+                        <!-- Assuming you have a product list passed from your backend to the frontend -->
+                        <% for (Product product : products) { %>
+                            <div class="product">
+                                <h3><%= product.getProductName() %></h3>
+                                <!-- Loop through each image for the product -->
+                                <% for (Image image : product.getImages()) { %>
+                                    <img src="<%= image.getImageUrl() %>" alt="Image of <%= product.getProductName() %>">
+                                <% } %>
+                                <!-- Product details, price, etc. -->
+                                <p>Price: $<%= product.getPrice() %></p>
+                                <p>Description: <%= product.getDescription() %></p>
+                                <p>Stock: <%= product.getStock() %></p>
+                            </div>
+                        <% } %>
+                    </div>
+                    
+                        
+<!-- 
                     <div class="product-grid">
                         <div class="product">
                             <img src="1.jpg" alt="Product 1">
-                            <p>Product 1</p>
+                            <h3><%= product.name %></h3>
                             <p>$10.00</p>
                         </div>
                         
@@ -164,7 +184,7 @@
                             <p>$30.00</p>
                         </div>
 
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
