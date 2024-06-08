@@ -130,7 +130,6 @@ body{
     background-color: #91C8E4;
 }
 
-<<<<<<< HEAD
 .modal {
     display: none;
     position: fixed;
@@ -167,8 +166,6 @@ body{
 }
 
 
-=======
->>>>>>> 8c4f5e1432e7cf33d759d632abc874d72957dfed
 /* #sidebar {
     position: fixed;
     top: 90px;
@@ -379,7 +376,6 @@ body{
     z-index: 2;
 }
 
-<<<<<<< HEAD
 #footer .contact-info-footer {
     background-color: #91C8E4;
     height: 20%;
@@ -409,45 +405,4 @@ body{
     width: 100%;
     padding-left: 100%;
     animation: marquee 10s linear infinite;
-=======
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.product {
-    background-color: #91C8E4;
-    border: 1px solid #ddd;
-    padding: 10px 10px 10px 10px;
-    width: calc(33.333% - 20px);
-    box-sizing: border-box;
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-}
-
-.main_container .container .banner {
-    width: 100%;
-    height: 400px;
-    margin-bottom: 10px;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.main_container .container .banner img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 1s;
-}
-
-.main_container .container .banner img.hidden {
-    opacity: 0;
->>>>>>> 8c4f5e1432e7cf33d759d632abc874d72957dfed
 }
