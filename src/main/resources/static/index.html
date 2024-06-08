@@ -29,18 +29,25 @@
                         <span>1900.1900</span>
                     </button>
                 </div>
-                <div>
+
+                <div class ="dropdown">
                     <button class="btn-location" onclick="window.location.href='#location'">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Our location</span>
                     </button>
+                    <div class ="dropdown-content">
+                        <p><i class="fas fa-solid fa-thumbtack"></i> No.1, Dai Co Viet, Hai Ba Trung, Ha Noi</p>
+                        <p><i class="fas fa-solid fa-thumbtack"></i>No.2, District seven, Ho Chi Minh</p>
+                    </div>
                 </div>
+
                 <div>
                     <button onclick="window.location.href='contact.html'">
                         <i class="fas fa-headset"></i>
                         <span>Contact us</span>
                     </button>
                 </div>
+
                 <div>
                     <button onclick="window.location.href='#news'">
                         <i class="fas fa-newspaper"></i>
@@ -142,7 +149,7 @@
                         </div>
                     </div>
                     
-                    <div class="item">
+                    <div class="item" id="news">
                         <h2>Dont Forget!!!</h2>
                         <ul>
                             <li><i class="fas fa-envelope"></i> Sign up for our newsletter and get 10% off your first order!</li>
@@ -158,7 +165,7 @@
     <div id="footer">            
         <div class="contact-info-footer">
             <p>Contact Us: 1900. 2900</p>
-            <p>Email: info@H2Tcomputershop.com</p>
+            <p id="location">Email: info@H2Tcomputershop.com</p>
             <p>Address: No.1, Dai Co Viet, Hai Ba Trung, Ha Noi</p>
         </div>
     </div>
