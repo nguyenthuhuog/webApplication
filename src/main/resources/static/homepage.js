@@ -1,55 +1,59 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const categories = [
-        { id: 1, name: 'Computer & Laptop', link: 'electronics.html' },
-        { id: 2, name: 'Keyboards', link: 'clothing.html' },
-        { id: 3, name: 'Mouses', link: 'home-kitchen.html' }
-    ];
+document.addEventListener("DOMContentLoaded", function() {
+    var hamburgerInner = document.querySelector(".hamburger");
+    var profileIcon = document.querySelector(".top_navbar .fa-user");
+    var profileDropdown = document.querySelector(".profile_dd");
 
-    const sidebar = document.getElementById('sidebar');
-    const hamburger = document.getElementById('hamburger');
+    if (hamburgerInner) {
+        hamburgerInner.addEventListener("click", function() {
+            var wrapper = document.querySelector(".wrapper");
+            if (wrapper) {
+                wrapper.classList.toggle("active");
+            }
+        });
+    }
 
-    categories.forEach(category => {
-        const button = document.createElement('button');
-        button.className = 'category';
-        button.textContent = category.name;
-        button.onclick = () => {
-            window.location.href = category.link;
-        };
-        sidebar.appendChild(button);
-    });
-    
-    // Inject CSS for font size
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .category {
-            font-size: 10px;
-        }
-    `;
-    document.head.appendChild(style);
-
-    // Hamburger button logic to toggle sidebar visibility
-    hamburger.addEventListener('click', () => {
-        if (sidebar.style.display === 'none' || sidebar.style.display === '') {
-            sidebar.style.display = 'block';
-        } else {
-            sidebar.style.display = 'none';
-        }
-    });
+    if (profileIcon) {
+        profileIcon.addEventListener("click", function() {
+            if (profileDropdown) {
+                profileDropdown.classList.toggle("active");
+            }
+        });
+    }
 
     // Banner slideshow logic
     let bannerIndex = 0;
     const banners = document.querySelectorAll('.banner img');
-    setInterval(() => {
-        banners[bannerIndex].classList.add('hidden');
-        bannerIndex = (bannerIndex + 1) % banners.length;
-        banners[bannerIndex].classList.remove('hidden');
-    }, 2000);
+    if (banners.length > 0) {
+        setInterval(() => {
+            banners[bannerIndex].classList.add('hidden');
+            bannerIndex = (bannerIndex + 1) % banners.length;
+            banners[bannerIndex].classList.remove('hidden');
+        }, 2000);
+    }
 
+    // Modal functions
     function openModal(modalId) {
-        document.getElementById(modalId).style.display = 'block';
+        var modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'block';
+        }
     }
 
     function closeModal(modalId) {
-        document.getElementById(modalId).style.display = 'none';
+        var modal = document.getElementById(modalId);
+        if (modal) {
+            modal.style.display = 'none';
+        }
     }
+
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+        if (event.target.classList.contains('container-login')) {
+            event.target.style.display = 'none';
+        }
+    }
+
+    // Adding openModal and closeModal to the global scope for use in HTML
+    window.openModal = openModal;
+    window.closeModal = closeModal;
 });
