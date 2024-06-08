@@ -3,6 +3,7 @@ package com.controller;
 import com.model.Product;
 import com.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,8 +16,10 @@ public class ProductController {
     private ProductRepository productRepository;
 
     @GetMapping
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
+    public String getAllProducts(Model model) {
+        List<Product> products = productRepository.findAll();
+        model.addAttribute("products", products);
+        return "products";
     }
 
     @GetMapping("/{id}")
