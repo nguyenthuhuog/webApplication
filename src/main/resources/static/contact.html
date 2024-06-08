@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <div id="header">
         <div class="logo">
@@ -21,43 +23,43 @@
         <div class="auth-buttons">
             <div class="contact-info">
                 <div>
-                    <button onclick="window.location.href='tel:19001900'">
+                    <button>
                         <i class="fas fa-phone-alt"></i>
                         <span>1900.1900</span>
                     </button>
                 </div>
                 <div>
-                    <button class="btn-location" onclick="window.location.href='#location'">
+                    <button class="btn-location">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Our location</span>
                     </button>
                 </div>
                 <div>
-                    <button onclick="window.location.href='contact.html'">
+                    <button>
                         <i class="fas fa-headset"></i>
                         <span>Contact us</span>
                     </button>
                 </div>
                 <div>
-                    <button onclick="window.location.href='#news'">
+                    <button>
                         <i class="fas fa-newspaper"></i>
                         <span>Tech news</span>
                     </button>
                 </div>
-                <button class="btn-cart" onclick="window.location.href='#cart'">
+                <button class="btn-cart">
                     <i class="fas fa-shopping-cart"></i>
                 </button>
-                <button class="btn btn-login" onclick="openModal('loginModal')">Login</button>
-                <button class="btn btn-register" onclick="openModal('registerModal')">Register</button>
+                <button class="btn btn-login">Login</button>
+                <button class="btn btn-register">Register</button>
             </div>
         </div>
     </div>
-    
+
     <div class="wrapper">
         <div class="top_navbar">
             <div class="hamburger">
                 <div class="hamburger__inner">
-                    <span class="icon"><i class="fas fa-bars"></i></span>
+                    <span class="icon"><i class=" fas fa-regular fa-bars"></i></span>
                 </div>
             </div>
 
@@ -65,31 +67,32 @@
                 <div class="logo">Categories</div>
                 <div class="right_menu">
                     <ul>
-                        <li>Sale news: Up to 50% off on selected items! ----</li>
+                        <li> Sale news: Up to 50% off on selected items! ----
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
-    
+
         <div class="main_container">
             <div class="sidebar">
                 <div class="sidebar__inner">
                     <ul>
                         <li>
                             <a href="electronics.html">
-                                <span class="icon"><i class="fas fa-laptop"></i></span>
+                                <span class="icon"><i class=" fas fa-solid fa-laptop"></i></span>
                                 <span class="title">Computer & Laptop</span>
                             </a>
                         </li>
                         <li>
                             <a href="clothing.html">
-                                <span class="icon"><i class="fas fa-keyboard"></i></span>
+                                <span class="icon"><i class="fas fa-solid fa-keyboard"></i></span>
                                 <span class="title">Keyboards</span>
                             </a>
                         </li>
                         <li>
                             <a href="home-kitchen.html">
-                                <span class="icon"><i class="fas fa-computer-mouse"></i></span>
+                                <span class="icon"><i class="fas fa-solid fa-computer-mouse"></i></span>
                                 <span class="title">Mouses</span>
                             </a>
                         </li>
@@ -132,40 +135,11 @@
         </div>
     </div>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('loginModal')">&times;</span>
-            <form>
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Register Modal -->
-    <div id="registerModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('registerModal')">&times;</span>
-            <form>
-                <label for="new-username">Username</label>
-                <input type="text" id="new-username" name="new-username">
-                <label for="new-password">Password</label>
-                <input type="password" id="new-password" name="new-password">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-                <button type="submit">Register</button>
-            </form>
-        </div>
-    </div>
-
     <footer>
         <!-- Footer content here -->
     </footer>
 
     <script src="homepage.js"></script>
 </body>
+
 </html>
