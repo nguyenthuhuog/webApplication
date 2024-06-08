@@ -25,7 +25,7 @@ public class MessageController {
         return messageRepository.findById(id).orElse(null);
     }
 
-    @PostMapping(consumes = "application/x-www-form-urlencoded")
+    @PostMapping(consumes = "multipart/form-data")
     public Message createMessage(@ModelAttribute MessageDTO messageDTO) {
         Message message = new Message();
         message.setFirstName(messageDTO.getFirstName());
